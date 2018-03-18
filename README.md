@@ -1,28 +1,30 @@
 # README
 
-To install ruby and nodejs run `asdf install` in the root directory of the project
 
+## Getting Started
 
+To install ruby and nodejs run go to the root directory of the project and run
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+asdf install
+```
 
-Things you may want to cover:
+To get started with the app, clone the repo and then install the needed gems:
 
-* Ruby version
+```
+$ bundle install --without production
+```
 
-* System dependencies
+Next, migrate the database:
 
-* Configuration
+```
+$ rails db:migrate
+```
 
-* Database creation
+Finally, run the test suite to verify that everything is working correctly:
 
-* Database initialization
+```
+$ rails test
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If the test suite passes, you
