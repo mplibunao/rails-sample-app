@@ -32,3 +32,73 @@ To generate integration tests
 ```
 rails generate integration_test site_layout
 ```
+
+## ActiveRecord
+
+Creates user and saves it to database
+
+```
+user = new User(name: "Mp", email: "mp@gmail.com")
+user.save
+```
+
+Create user and save it to database
+
+```
+foo = user.create(name: "Foo", email: "foo@bar.com")
+```
+
+Delete the user from the database
+
+```
+foo.destroy
+```
+
+Returns the user with an id of 1
+
+```
+User.find(1)
+```
+
+Find User based on specific attributes
+
+```
+User.find_by(email: "mp@gmail.com")
+```
+
+Other commands
+
+```
+User.first
+User.all
+```
+
+Updating user objects
+
+```
+user
+user.email = "marklibunao@gmail.com"
+user.save
+```
+
+Reload object based on the database information
+
+```
+user.email
+"mplibuao@gmail.com"
+user.email = "foobar@gmail.com"
+user.reload.email
+"mplibuao@gmail.com"
+```
+
+Update multiple attributes with `update_attributes`
+
+```
+user.update_attributes(name: "The Dude", email: "dude@abides.org")
+```
+
+Generating more migrations
+
+```
+rails generate migration add_index_to_users_email
+```
