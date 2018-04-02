@@ -102,3 +102,26 @@ Generating more migrations
 ```
 rails generate migration add_index_to_users_email
 ```
+
+Run in different environments
+
+```
+# Running console in a different environemnt
+
+rails console test
+Rails.env
+=> "test"
+Rails.env.test?
+=> true
+
+# Running server and doing migrations in different env
+
+rails s --environment production
+rails db:migrate RAILS_ENV=production
+```
+
+Reset database
+
+```
+rails db:migrate:reset
+```
